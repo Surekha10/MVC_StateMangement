@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreateSession</title>
+</head>
+<body>
+    <div align="center">
+        @using(Html.BeginForm("CreateSession","Home"))
+        {
+            @Html.TextBox("employeeid","")
+            <input type="submit" value="Create Session"/>
+            <br/>
+            @ViewBag.msg
+            <br/>
+            @Html.ActionLink("Read Session","ReadSession","Home")
+        }
+    </div>
+</body>
+</html>
